@@ -1,0 +1,24 @@
+<testsuite failures="0" name="karate/request/updateAnExistingPet.feature" skipped="0" tests="2" time="1.395212">
+  <testcase classname="karate.request.updateAnExistingPet" name="Check the service PUT method" time="0.671011">
+    <system-out>* url url ................................................................. passed
+* request {} .............................................................. passed
+Given path 'pet' .......................................................... passed
+When method put ........................................................... passed
+* def requestBody = read ('classpath:Karate/request/updateAnExistingPet.json') . passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.updateAnExistingPet" name="Check the service PUT method" time="0.724201">
+    <system-out>* url url ................................................................. passed
+* request {} .............................................................. passed
+Given path 'pet' .......................................................... passed
+When method put ........................................................... passed
+* def requestBody = read ('classpath:Karate/request/updateAnExistingPet.json') . passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+* request {} .............................................................. passed
+Given path 'pet','lola' ................................................... passed
+When method put ........................................................... passed
+* def requestBody = read ('classpath:Karate/request/updateAnExistingPetinvalid.json') . passed
+Then status 405 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,32 @@
+<testsuite failures="0" name="karate/request/createpet.feature" skipped="0" tests="2" time="3.053636">
+  <testcase classname="karate.request.createpet" name="add new pet" time="2.357843">
+    <system-out>* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/request/requestBodyCreatePet.json') . passed
+* def responseBody = read ('classpath:Karate/request/responseCreatePet.json') . passed
+Given path 'pet' .......................................................... passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == responseBody ........................................ passed
+And assert response.id == requestBody.id .................................. passed
+And assert response.category.id ==requestBody.category.id ................. passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.createpet" name="add pet with invalid data" time="0.695793">
+    <system-out>* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/request/requestBodyCreatePet.json') . passed
+* def responseBody = read ('classpath:Karate/request/responseCreatePet.json') . passed
+Given path 'pet' .......................................................... passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == responseBody ........................................ passed
+And assert response.id == requestBody.id .................................. passed
+And assert response.category.id ==requestBody.category.id ................. passed
+* url url ................................................................. passed
+Given path 'pet' .......................................................... passed
+* def requestBody = read ('classpath:Karate/request/requestBodyCreatePetinvalid.json') . passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 500 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>
