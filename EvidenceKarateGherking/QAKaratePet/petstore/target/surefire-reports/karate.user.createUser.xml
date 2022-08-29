@@ -1,0 +1,56 @@
+<testsuite failures="0" name="karate/user/createUser.feature" skipped="0" tests="3" time="1.916674">
+  <testcase classname="karate.user.createUser" name="Create a new user with valid data" time="0.651475">
+    <system-out>* url url ................................................................. passed
+* def createUserBody = read('classpath:Karate/user/createUserBody.json') .. passed
+* def createUserResponse = read('Karate/user/createUserResponse.json') .... passed
+Given path 'user' ......................................................... passed
+And request createUserBody ................................................ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == createUserResponse .................................. passed
+And assert response.message == idUser ..................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.user.createUser" name="Create a new user with valid status" time="0.611234">
+    <system-out>* url url ................................................................. passed
+* def createUserBody = read('classpath:Karate/user/createUserBody.json') .. passed
+* def createUserResponse = read('Karate/user/createUserResponse.json') .... passed
+Given path 'user' ......................................................... passed
+And request createUserBody ................................................ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == createUserResponse .................................. passed
+And assert response.message == idUser ..................................... passed
+* url url ................................................................. passed
+* def createUserBody = read('classpath:Karate/user/createUserBody.json') .. passed
+Given path 'user' ......................................................... passed
+And request createUserBody ................................................ passed
+And createUserBody.userStatus = "Available" ............................... passed
+When method POST .......................................................... passed
+Then status 500 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.user.createUser" name="Create a new user with valid status" time="0.653965">
+    <system-out>* url url ................................................................. passed
+* def createUserBody = read('classpath:Karate/user/createUserBody.json') .. passed
+* def createUserResponse = read('Karate/user/createUserResponse.json') .... passed
+Given path 'user' ......................................................... passed
+And request createUserBody ................................................ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == createUserResponse .................................. passed
+And assert response.message == idUser ..................................... passed
+* url url ................................................................. passed
+* def createUserBody = read('classpath:Karate/user/createUserBody.json') .. passed
+Given path 'user' ......................................................... passed
+And request createUserBody ................................................ passed
+And createUserBody.userStatus = "Available" ............................... passed
+When method POST .......................................................... passed
+Then status 500 ........................................................... passed
+* url url ................................................................. passed
+* def createUserBody = read('classpath:Karate/user/createUserBody.json') .. passed
+Given path 'user' ......................................................... passed
+And request createUserBody ................................................ passed
+And createUserBody.userStatus = "test" .................................... passed
+When method POST .......................................................... passed
+Then status 500 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

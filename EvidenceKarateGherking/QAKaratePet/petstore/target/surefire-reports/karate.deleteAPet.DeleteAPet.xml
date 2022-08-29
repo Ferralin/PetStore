@@ -1,0 +1,38 @@
+<testsuite failures="0" name="karate/deleteAPet/DeleteAPet.feature" skipped="0" tests="3" time="1.975624">
+  <testcase classname="karate.deleteAPet.DeleteAPet" name="Delete a pet" time="0.685622">
+    <system-out>* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/deleteAPet/requestDeletesAPet.json') . passed
+Given path 'pet', '1' ..................................................... passed
+When method DELETE ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.deleteAPet.DeleteAPet" name="Delete a pet" time="0.644795">
+    <system-out>* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/deleteAPet/requestDeletesAPet.json') . passed
+Given path 'pet', '1' ..................................................... passed
+When method DELETE ........................................................ passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/deleteAPet/requestDeletesAPetinvalid.json') . passed
+Given path 'pet', 'qwerty' ................................................ passed
+When method DELETE ........................................................ passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.deleteAPet.DeleteAPet" name="Delete a pet" time="0.645208">
+    <system-out>* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/deleteAPet/requestDeletesAPet.json') . passed
+Given path 'pet', '1' ..................................................... passed
+When method DELETE ........................................................ passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/deleteAPet/requestDeletesAPetinvalid.json') . passed
+Given path 'pet', 'qwerty' ................................................ passed
+When method DELETE ........................................................ passed
+Then status 404 ........................................................... passed
+* url url ................................................................. passed
+* def requestBody = read ('classpath:Karate/deleteAPet/requestDeletesAPetinvalid.json') . passed
+Given path 'pet', '123' ................................................... passed
+When method DELETE ........................................................ passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

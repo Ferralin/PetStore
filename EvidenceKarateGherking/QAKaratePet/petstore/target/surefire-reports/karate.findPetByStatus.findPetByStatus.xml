@@ -1,0 +1,21 @@
+<testsuite failures="0" name="karate/findPetByStatus/findPetByStatus.feature" skipped="0" tests="2" time="1.285942">
+  <testcase classname="karate.findPetByStatus.findPetByStatus" name="Check the service GET method" time="0.669181">
+    <system-out>* url url ................................................................. passed
+Given path 'pet', 'findByStatus' .......................................... passed
+When method GET ........................................................... passed
+* def requestBody = read ('classpath:Karate/findPetByStatus/requestFindPetByStatusvalid.json') . passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.findPetByStatus.findPetByStatus" name="Check the service GET method" time="0.616761">
+    <system-out>* url url ................................................................. passed
+Given path 'pet', 'findByStatus' .......................................... passed
+When method GET ........................................................... passed
+* def requestBody = read ('classpath:Karate/findPetByStatus/requestFindPetByStatusvalid.json') . passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+Given path 'pet', 'findByStatus09' ........................................ passed
+When method GET ........................................................... passed
+* def requestBody = read ('classpath:Karate/findPetByStatus/requestFindPetByStatusinvalid.json') . passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

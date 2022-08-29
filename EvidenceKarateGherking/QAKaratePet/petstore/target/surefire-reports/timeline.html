@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-1"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"createpet[1:11]","start":1220,"end":3258,"title":"createpet[1:11] 18:00:01.220-18:00:03.258 add new pet"},{"id":2,"group":1,"content":"createpet[2:24]","start":3269,"end":3892,"title":"createpet[2:24] 18:00:03.269-18:00:03.892 add pet with invalid data"},{"id":3,"group":1,"content":"DeleteAPet[1:10]","start":4024,"end":4711,"title":"DeleteAPet[1:10] 18:00:04.024-18:00:04.711 Delete a pet"},{"id":4,"group":1,"content":"DeleteAPet[2:16]","start":4728,"end":5373,"title":"DeleteAPet[2:16] 18:00:04.728-18:00:05.373 Delete a pet"},{"id":5,"group":1,"content":"DeleteAPet[3:22]","start":5381,"end":6027,"title":"DeleteAPet[3:22] 18:00:05.381-18:00:06.027 Delete a pet"},{"id":6,"group":1,"content":"findPetByStatus[1:10]","start":6061,"end":6729,"title":"findPetByStatus[1:10] 18:00:06.061-18:00:06.729 Check the service GET method"},{"id":7,"group":1,"content":"findPetByStatus[2:17]","start":6741,"end":7359,"title":"findPetByStatus[2:17] 18:00:06.741-18:00:07.359 Check the service GET method"},{"id":8,"group":1,"content":"updateAnExistingPet[1:9]","start":7375,"end":8009,"title":"updateAnExistingPet[1:9] 18:00:07.375-18:00:08.009 Check the service PUT method"},{"id":9,"group":1,"content":"updateAnExistingPet[2:17]","start":8024,"end":8714,"title":"updateAnExistingPet[2:17] 18:00:08.024-18:00:08.714 Check the service PUT method"},{"id":10,"group":1,"content":"createUser[1:11]","start":8736,"end":9388,"title":"createUser[1:11] 18:00:08.736-18:00:09.388 Create a new user with valid data"},{"id":11,"group":1,"content":"createUser[2.1:29]","start":9394,"end":10006,"title":"createUser[2.1:29] 18:00:09.394-18:00:10.006 Create a new user with valid status"},{"id":12,"group":1,"content":"createUser[2.2:30]","start":10011,"end":10665,"title":"createUser[2.2:30] 18:00:10.011-18:00:10.665 Create a new user with valid status"},{"id":13,"group":1,"content":"loginUser[1:11]","start":10680,"end":11326,"title":"loginUser[1:11] 18:00:10.680-18:00:11.326 Log in with valid data"},{"id":14,"group":1,"content":"loginUser[2.1:25]","start":11340,"end":12020,"title":"loginUser[2.1:25] 18:00:11.340-18:00:12.020 Log in with invalid data"},{"id":15,"group":1,"content":"loginUser[2.2:26]","start":12024,"end":12746,"title":"loginUser[2.2:26] 18:00:12.024-18:00:12.746 Log in with invalid data"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

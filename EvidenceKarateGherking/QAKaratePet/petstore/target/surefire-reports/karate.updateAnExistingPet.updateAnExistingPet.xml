@@ -1,0 +1,24 @@
+<testsuite failures="0" name="karate/updateAnExistingPet/updateAnExistingPet.feature" skipped="0" tests="2" time="1.322188">
+  <testcase classname="karate.updateAnExistingPet.updateAnExistingPet" name="Check the service PUT method" time="0.633083">
+    <system-out>* url url ................................................................. passed
+* request {} .............................................................. passed
+Given path 'pet' .......................................................... passed
+When method put ........................................................... passed
+* def requestBody = read ('classpath:Karate/updateAnExistingPet/updateAnExistingPet.json') . passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.updateAnExistingPet.updateAnExistingPet" name="Check the service PUT method" time="0.689105">
+    <system-out>* url url ................................................................. passed
+* request {} .............................................................. passed
+Given path 'pet' .......................................................... passed
+When method put ........................................................... passed
+* def requestBody = read ('classpath:Karate/updateAnExistingPet/updateAnExistingPet.json') . passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+* request {} .............................................................. passed
+Given path 'pet','lola' ................................................... passed
+When method put ........................................................... passed
+* def requestBody = read ('classpath:Karate/updateAnExistingPet/updateAnExistingPetinvalid.json') . passed
+Then status 405 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>
